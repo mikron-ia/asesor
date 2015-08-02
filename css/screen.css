@@ -1,0 +1,620 @@
+table > tbody > tr > td.center {
+    text-align: center;
+}
+
+table > thead > tr > th {
+    text-align: center;
+}
+
+body {
+    font-size: 75%;
+    color: #222;
+    background: #fff;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	min-width:640px;
+	max-width:1280px;
+	margin:0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #111111;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 1.4em;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin-bottom: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 0.8em;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+p .right {
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: 0;
+}
+
+a:focus, a:hover {
+    color: #00FF00;
+}
+
+a {
+    color: #008000;
+    text-decoration: underline;
+}
+
+blockquote {
+    margin: 1.5em;
+    color: #666;
+    font-style: italic;
+}
+
+strong, dfn {
+    font-weight: bold;
+}
+
+em, dfn {
+    font-style: italic;
+}
+
+sup, sub {
+    line-height: 0;
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted #666;
+}
+
+address {
+    margin: 0 0 1.5em;
+    font-style: italic;
+}
+
+del {
+    color: #666;
+}
+
+pre {
+    margin: 1.5em 0;
+    white-space: pre;
+}
+
+pre, code, tt {
+    font: 1em 'andale mono', 'lucida console', monospace;
+    line-height: 1.5;
+}
+
+li ul, li ol {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0 1.5em 1.5em 0;
+    padding-left: 1.5em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+dl {
+    margin: 0 0 1.5em 0;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 1.5em;
+}
+
+table {
+    margin-bottom: 1.0em;
+    width: 100%;
+}
+
+th {
+    font-weight: bold;
+}
+
+thead th {
+    background: #d9ffc3;
+}
+
+th, td, caption {
+    padding: 4px 10px 4px 5px;
+}
+
+caption {
+    background: #eee;
+}
+
+.small {
+    font-size: .8em;
+    margin-bottom: 1.875em;
+    line-height: 1.875em;
+}
+
+.large {
+    font-size: 1.2em;
+    line-height: 2.5em;
+    margin-bottom: 1.25em;
+}
+
+.hide {
+    display: none;
+}
+
+.highlight {
+    background: #ff0;
+}
+
+.clear {
+    clear: both;
+}
+
+div.blok {
+    display: block;
+    float: left;
+    overflow: visible;
+}
+
+div.blok-padded {
+    display: block;
+    float: left;
+    overflow: visible;
+}
+
+div.twosplit {
+    width: 48%;
+    margin: auto;
+}
+
+div.threesplit {
+    width: 33%;
+}
+
+div.foursplit {
+    width: 24.25%;
+}
+
+div.fivesplit {
+    width: 19.5%;
+}
+
+div.sixsplit {
+    width: 16.5%;
+}
+
+div.sevensplit {
+    width: 14.15%;
+}
+
+div.box-buttons {
+    float: right;
+    width: 10%;
+}
+
+div.box-rest {
+    display: block;
+    overflow: hidden;
+}
+
+div.padded {
+    max-width: 97%;
+    padding: 1%;
+}
+
+div.twosplit-padded {
+    max-width: 47%;
+    padding: 1%;
+}
+
+div.twoplussplit-padded {
+    max-width: 65%;
+    padding: 1%;
+}
+
+div.threesplit-padded {
+    max-width: 30%;
+    padding: 1%;
+}
+
+div.foursplit-padded {
+    max-width: 24.25%;
+    padding: 1%;
+}
+
+div.gmnotes {
+    background-color: PaleGoldenRod;
+    border: 4px solid DarkGoldenRod;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+div.information {
+    background-color: Gainsboro;
+    border: 4px solid SeaGreen;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+div.notice-negative {
+    background-color: pink;
+    border: 4px solid red;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+div.notice-neutral {
+    background-color: lightyellow;
+    border: 4px solid gold;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+div.notice-positive {
+    background-color: palegreen;
+    border: 4px solid green;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+a.subtleLink {
+    color: #555555;
+    text-decoration: underline;
+}
+
+a.subtlerLink {
+    color: #555555;
+    text-decoration: none;
+}
+
+div.clock {
+    font-family: "Lucida Console", Monaco, monospace;
+    color: green;
+    margin: 0.5em 1.2em 0 0;
+}
+
+p.subtitle {
+    font-style: italic;
+}
+
+p.link {
+    float: right !important;
+    font-size: 1.2em;
+}
+
+p.note {
+    font-style: italic;
+}
+
+div.just {
+    text-align: justify;
+}
+
+div.box {
+    padding: 1em;
+    margin-bottom: 1em;
+    background: inherit;
+}
+
+table.records {
+    font-family: monospace;
+}
+
+table.records > tbody > tr:hover {
+    background-color: #d1ffc3;
+}
+
+table.table-card {
+}
+
+table.table-card > tbody > tr > td:first-child {
+    font-weight: bold;
+}
+
+table.table-card > tbody > tr > td:first-child > a {
+    font-weight: normal;
+}
+
+table.table-goal {
+    width: auto;
+}
+
+table.table-goal > caption {
+    font-weight: bold;
+}
+
+table.table-goal-padding {
+    margin-left: 0.2em;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Description boxes */
+div.description-external-box {
+}
+
+div.description-internal-box {
+}
+
+div.description-internal-box > h4 {
+    margin-top: 1em;
+}
+
+p.tag {
+    border-radius: 15px;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+p.tag-positive {
+    border: 4px solid green;
+    color: green;
+}
+
+p.tag-neutral {
+    border: 4px solid gold;
+    color: gold;
+}
+
+p.tag-negative {
+    border: 4px solid red;
+    color: red;
+}
+
+p.tag-informative {
+    border: 4px solid black;
+    color: black;
+}
+
+td.assessment-cell {
+    width: 15%;
+}
+
+div.assessment-bar {
+    text-align: center;
+    margin: auto;
+}
+
+div.assessment-text {
+    text-align: center;
+}
+
+/* Button for toggles */
+div.button {
+    background-color: yellowgreen;
+    border: 4px solid green;
+    border-radius: 15px;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    cursor: pointer;
+}
+
+div.button > a {
+    text-decoration: none;
+}
+
+ul.list-wide > li {
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+}
+
+div.description-box-sided {
+    display: block;
+    position: relative;
+    padding: 3em 3.5em .5em .7em;
+    overflow: hidden;
+}
+
+div.description-box-sided > div {
+    transform: translateX(2.5em) translateY(-2em);
+}
+
+div.description-box-sided > h4 {
+    font: 16px Georgia, Serif;
+    background: lightgreen;
+    color: black;
+    padding: .5em;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    transform: rotate(90deg) translateX(2em);
+    transform-origin: 1.8em .5em;
+}
+
+div.description-box-transmission {
+
+}
+
+div.description-box-transmission > h4 {
+    font-size: 0.7em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: bold;
+}
+
+/* jQuery classes */
+.ui-tabs {
+    position: relative;
+    padding: .2em;
+}
+
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding-bottom: 5em;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 0;
+    margin: 1px .2em 0 0;
+    border-bottom-width: 0;
+    padding: 0;
+    white-space: nowrap;
+
+    background-color: limegreen;
+    border: 4px solid green;
+    border-radius: 15px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ui-tabs a:focus, a:hover, a {
+    color: #008000;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    float: left;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background-color: yellowgreen;
+}
+
+.ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 1em 1.4em;
+    background: none;
+}
+
+p.caution:before {
+    content: "CAUTION: ";
+    font-weight: bold;
+}
+
+p.disclaimer:before {
+    content: "Disclaimer: ";
+    font-weight: bold;
+}
+
+div.indexbox {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #008000;
+    float: left;
+    min-height: 200px;
+    cursor: pointer;
+}
+
+div.indexbox-wide {
+    width: 550px;
+}
+
+div.indexbox-narrow {
+    width: 250px;
+}
+
+div.indexbox-low {
+    min-height: 100px;
+}
+
+div.indexbox-lower {
+    min-height: 50px;
+}
+
+div.indexbox > noscript > p {
+    float: right;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+textarea.fullwidth {
+    width: 98%;
+    margin: auto;
+}
+
+p.version {
+    color: lime;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-indent: 0;
+}
+
+table.assessment {
+
+}
+
+table.assessment>tbody>tr>td {
+	text-align: center;
+}
+
+table.assessment>tbody>tr>td:first-child {
+	text-align: left;
+	font-weight:bold; width:35%;
+}
