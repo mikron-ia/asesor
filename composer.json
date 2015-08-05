@@ -1,0 +1,14 @@
+{
+    "name": "mikron-ia/asesor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mikron",
+            "email": "mikronia@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Mikron\\Asesor\\": "src/"}
+    },
+    "require": {}
+}
