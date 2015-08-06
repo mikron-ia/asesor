@@ -2,6 +2,7 @@
 
 namespace Mikron\Asesor\Domain\Entity;
 
-class Personality {
+class Personality
+{
 
 }

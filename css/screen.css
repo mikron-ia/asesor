@@ -11,9 +11,9 @@ body {
     color: #222;
     background: #fff;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-	min-width:640px;
-	max-width:1280px;
-	margin:0 auto;
+    min-width: 640px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -610,11 +610,12 @@ table.assessment {
 
 }
 
-table.assessment>tbody>tr>td {
-	text-align: center;
+table.assessment > tbody > tr > td {
+    text-align: center;
 }
 
-table.assessment>tbody>tr>td:first-child {
-	text-align: left;
-	font-weight:bold; width:35%;
+table.assessment > tbody > tr > td:first-child {
+    text-align: left;
+    font-weight: bold;
+    width: 35%;
 }
