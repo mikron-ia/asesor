@@ -4,17 +4,18 @@ use Mikron\Asesor\Domain\Entity\Muse;
 
 class MuseTest extends PHPUnit_Framework_TestCase
 {
-    private $muse;
-
     protected function setUp()
     {
-        if ($json = file_get_contents(dirname(__FILE__) . '/data/main.json')) {
-            $config = json_decode($json);
-        } else {
-            $config = null;
-        }
 
-        $this->muse = new Muse($config);
+    }
+
+    private function loadMuseMain($name)
+    {
+        if ($json = file_get_contents(dirname(__FILE__) . '/data/' . $name . '.json')) {
+            return json_decode($json);
+        } else {
+            return null;
+        }
     }
 
     /**
@@ -22,7 +23,10 @@ class MuseTest extends PHPUnit_Framework_TestCase
      */
     public function isNameCorrect()
     {
-        $this->assertEquals("Assessor test name", $this->muse->getName());
+        $config = $this->loadMuseMain('mainCorrect');
+        $muse = new Muse($config);
+
+        $this->assertEquals("Assessor test name", $muse->getName());
     }
 
     /**
@@ -30,6 +34,33 @@ class MuseTest extends PHPUnit_Framework_TestCase
      */
     public function isDescriptionCorrect()
     {
-        $this->assertEquals("General description regarding assessor habits, approach, nature, and moods. Designed for human readability only.", $this->muse->getDescription());
+        $config = $this->loadMuseMain('mainCorrect');
+        $muse = new Muse($config);
+
+        $this->assertEquals("General description regarding assessor habits, approach, nature, and moods. Designed for human readability only.",
+            $muse->getDescription());
+    }
+
+    /**
+     * @test
+     */
+    public function isNameDefault()
+    {
+        $config = $this->loadMuseMain('empty');
+        $muse = new Muse($config);
+
+        $this->assertEquals("[unknown assessor]", $muse->getName());
+    }
+
+    /**
+     * @test
+     */
+    public function isDescriptionDefault()
+    {
+        $config = $this->loadMuseMain('empty');
+        $muse = new Muse($config);
+
+        $this->assertEquals("[description has not been provided]",
+            $muse->getDescription());
     }
 }

@@ -13,8 +13,8 @@ class Muse
     {
         $this->configuration = $configuration;
 
-        $this->name = $configuration->name;
-        $this->description = $configuration->generalDescription;
+        $this->name = isset($configuration->name) ? $configuration->name : "[unknown assessor]";
+        $this->description = isset($configuration->generalDescription) ? $configuration->generalDescription : "[description has not been provided]";
     }
 
     /**
@@ -24,6 +24,7 @@ class Muse
     {
         return $this->name;
     }
+
     /**
      * @return string
      */
