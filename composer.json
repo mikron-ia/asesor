@@ -1,14 +1,23 @@
 {
-    "name": "mikron-ia/asesor",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mikron",
-            "email": "mikronia@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {"Mikron\\Asesor\\": "src/"}
-    },
-    "require": {}
+  "name": "mikron-ia/asesor",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mikron",
+      "email": "mikronia@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Mikron\\Asesor\\": "src/"
+    }
+  },
+  "require": {
+    "phpunit/phpunit": "4.7",
+    "php": ">=5.5.0",
+    "ext-mbstring": "*"
+  },
+  "scripts": {
+    "test": "php vendor/phpunit/phpunit/phpunit --testdox --configuration tests/phpunit.xml --coverage-clover build/logs/clover.xml"
+  }
 }

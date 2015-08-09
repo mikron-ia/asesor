@@ -21,33 +21,40 @@ require_once 'config/main.php';
     require_once 'config/data.php';
 
     /* Data acquisition */
-    $assessments = ['?'];
-    ?>
-    <table class="assessment">
-        <thead>
-        <tr>
-            <th>Subject</th>
-            <th>Code</th>
-            <th>Assessment</th>
-            <th>Value</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        /* Data presentation */
-        foreach ($assessments as $assessment) {
-            ?>
-            <tr>
-                <td>?</td>
-                <td>?</td>
-                <td>?</td>
-                <td>?</td>
-            </tr>
-            <?php
-        }
+    foreach ($config['muses'] as $museCode) {
+
+        $assessments = ['?'];
+
         ?>
-        </tbody>
-    </table>
+        <table class="assessment">
+            <caption><?php echo ucfirst($museCode); ?></caption>
+            <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Code</th>
+                <th>Assessment</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            /* Data presentation */
+            foreach ($assessments as $assessment) {
+                ?>
+                <tr>
+                    <td>?</td>
+                    <td>?</td>
+                    <td>?</td>
+                    <td>?</td>
+                </tr>
+                <?php
+            }
+            ?>
+            </tbody>
+        </table>
+        <?php
+    }
+    ?>
 </div>
 </body>
 </html>
