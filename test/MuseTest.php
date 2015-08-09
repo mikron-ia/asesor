@@ -3,8 +3,12 @@
 use Mikron\Asesor\Domain\Entity\Muse;
 use Mikron\Asesor\Domain\Entity\Personality;
 
+require_once 'JsonLoader.php';
+
 class MuseTest extends PHPUnit_Framework_TestCase
 {
+    use JsonLoader;
+
     protected function setUp()
     {
 
@@ -12,13 +16,9 @@ class MuseTest extends PHPUnit_Framework_TestCase
 
     private function loadMuse($name)
     {
-        if ($json = file_get_contents(dirname(__FILE__) . '/data/' . $name . '.json')) {
-            $config = json_decode($json);
-        } else {
-            $config = null;
-        }
+        $config = $this->loadJSON($name);
 
-        $personality = new Personality();
+        $personality = new Personality([]);
         $muse = new Muse($config, $personality);
 
         return $muse;
