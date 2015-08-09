@@ -1,6 +1,7 @@
 <?php
 
 use Mikron\Asesor\Domain\Entity\Muse;
+use Mikron\Asesor\Domain\Entity\Personality;
 
 class MuseTest extends PHPUnit_Framework_TestCase
 {
@@ -9,13 +10,18 @@ class MuseTest extends PHPUnit_Framework_TestCase
 
     }
 
-    private function loadMuseMain($name)
+    private function loadMuse($name)
     {
         if ($json = file_get_contents(dirname(__FILE__) . '/data/' . $name . '.json')) {
-            return json_decode($json);
+            $config = json_decode($json);
         } else {
-            return null;
+            $config = null;
         }
+
+        $personality = new Personality();
+        $muse = new Muse($config, $personality);
+
+        return $muse;
     }
 
     /**
@@ -23,8 +29,7 @@ class MuseTest extends PHPUnit_Framework_TestCase
      */
     public function isNameCorrect()
     {
-        $config = $this->loadMuseMain('mainCorrect');
-        $muse = new Muse($config);
+        $muse = $this->loadMuse('mainCorrect');
 
         $this->assertEquals("Assessor test name", $muse->getName());
     }
@@ -34,8 +39,7 @@ class MuseTest extends PHPUnit_Framework_TestCase
      */
     public function isDescriptionCorrect()
     {
-        $config = $this->loadMuseMain('mainCorrect');
-        $muse = new Muse($config);
+        $muse = $this->loadMuse('mainCorrect');
 
         $this->assertEquals("General description regarding assessor habits, approach, nature, and moods. Designed for human readability only.",
             $muse->getDescription());
@@ -46,8 +50,7 @@ class MuseTest extends PHPUnit_Framework_TestCase
      */
     public function isNameDefault()
     {
-        $config = $this->loadMuseMain('empty');
-        $muse = new Muse($config);
+        $muse = $this->loadMuse('empty');
 
         $this->assertEquals("[unknown assessor]", $muse->getName());
     }
@@ -57,10 +60,8 @@ class MuseTest extends PHPUnit_Framework_TestCase
      */
     public function isDescriptionDefault()
     {
-        $config = $this->loadMuseMain('empty');
-        $muse = new Muse($config);
+        $muse = $this->loadMuse('empty');
 
-        $this->assertEquals("[description has not been provided]",
-            $muse->getDescription());
+        $this->assertEquals("[description has not been provided]", $muse->getDescription());
     }
 }

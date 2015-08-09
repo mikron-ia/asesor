@@ -4,17 +4,15 @@ namespace Mikron\Asesor\Domain\Entity;
 
 class Muse
 {
-    private $configuration;
-
     private $name;
     private $description;
 
-    public function __construct($configuration)
+    public function __construct($configuration, Personality $personality)
     {
-        $this->configuration = $configuration;
-
         $this->name = isset($configuration->name) ? $configuration->name : "[unknown assessor]";
         $this->description = isset($configuration->generalDescription) ? $configuration->generalDescription : "[description has not been provided]";
+
+        $this->personality = $personality;
     }
 
     /**
