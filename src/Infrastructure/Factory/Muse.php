@@ -3,6 +3,7 @@
 namespace Mikron\Asesor\Infrastructure\Factory;
 
 use Mikron\Asesor\Domain\Entity;
+use Mikron\Asesor\Infrastructure\Exception;
 
 class Muse
 {
@@ -24,10 +25,12 @@ class Muse
         if (file_exists($fullFileName)) {
             $configuration = $this->getDataObjectFromJson($fullFileName);
         } else {
-            throw new \InvalidArgumentException;
+            throw new Exception\MissingComponentException;
         }
 
-        $personality = new Entity\Personality([]);
+        $personalityFactory = new Personality();
+
+        $personality = $personalityFactory->loadFromFile($filename);
 
         return new Entity\Muse($configuration, $personality);
     }
