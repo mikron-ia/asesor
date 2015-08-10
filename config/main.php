@@ -1,7 +1,7 @@
 <?php
 
 $config = [
-    "version" => "0.dev",
+    "version" => "0-dev",
     "interface" => [
         "title" => "Task assessor",
         "logo" => "Task assessor",
