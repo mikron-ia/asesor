@@ -20,7 +20,7 @@ class Personality
         if (file_exists($fullFileName)) {
             $data = $this->getDataObjectFromJson($fullFileName);
         } else {
-            throw new Exception\MissingComponentException;
+            throw new Exception\MissingComponentException("Missing personality file for the muse. Please provide the file before using the functionality.");
         }
 
         return new Entity\Personality($data);

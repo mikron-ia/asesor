@@ -27,7 +27,7 @@ class MuseTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function isNameCorrect()
+    public function isMuseNameCorrect()
     {
         $muse = $this->loadMuse('mainCorrect');
 

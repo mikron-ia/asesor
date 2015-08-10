@@ -25,7 +25,7 @@ class Muse
         if (file_exists($fullFileName)) {
             $configuration = $this->getDataObjectFromJson($fullFileName);
         } else {
-            throw new Exception\MissingComponentException;
+            throw new Exception\MissingComponentException("Missing main configuration file for the muse. Please provide the file before using the functionality.");
         }
 
         $personalityFactory = new Personality();
