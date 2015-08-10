@@ -7,4 +7,9 @@ $config = [
         "logo" => "Task assessor",
         "welcome" => "Welcome to our new Call Assessor Muse Module. The module will provide an assessment of the situation, based on your muse's personality.",
     ],
+    /* @todo: create autoloading for muses */
+    "muses" => [
+        "Argonaut" => "argonaut",
+        "Ultimate" => "ultimate",
+    ],
 ];

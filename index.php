@@ -1,6 +1,9 @@
 <?php
-/* Basics */
-require_once 'config/main.php';
+
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config/main.php';
+require_once __DIR__ . '/config/data.php';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,17 +20,19 @@ require_once 'config/main.php';
 </div>
 <div id="assessment">
     <?php
-    require_once 'config/main.php';
-    require_once 'config/data.php';
+
+    $museFactory = new Mikron\Asesor\Infrastructure\Factory\Muse();
+
+    $muses = $museFactory->loadAllFromFiles($config['muses']);
 
     /* Data acquisition */
-    foreach ($config['muses'] as $museCode) {
+    foreach ($muses as $muse) {
 
         $assessments = ['?'];
 
         ?>
         <table class="assessment">
-            <caption><?php echo ucfirst($museCode); ?></caption>
+            <caption><?php echo $muse->getName(); ?></caption>
             <thead>
             <tr>
                 <th>Subject</th>
