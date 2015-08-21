@@ -15,7 +15,7 @@
   },
   "require": {
     "phpunit/phpunit": "4.7",
-    "php": ">=5.5.0",
+    "php": "~5.5",
     "ext-mbstring": "*"
   },
   "scripts": {

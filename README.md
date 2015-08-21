@@ -1,5 +1,5 @@
 # Task assessor
-Web application to appraise tasks according to rules.
+Web application to appraise tasks according to given general rules.
 
 ## Background
 The application was created to appraise and evaluate tasks presented to player characters in Eclipse Phase story. 

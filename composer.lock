@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4b235128710e812a840ce856e059e801",
+    "hash": "017ca3a72818a6ae636e6e868217e462",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -362,16 +362,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.3",
+            "version": "1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9"
+                "reference": "8b0723c09dd6593a27319c631bf7152be809bab0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
-                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/8b0723c09dd6593a27319c631bf7152be809bab0",
+                "reference": "8b0723c09dd6593a27319c631bf7152be809bab0",
                 "shasum": ""
             },
             "require": {
@@ -407,7 +407,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-06-19 03:43:16"
+            "time": "2015-08-13 08:20:49"
         },
         {
             "name": "phpunit/phpunit",
@@ -965,7 +965,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.0",
+        "php": "~5.5",
         "ext-mbstring": "*"
     },
     "platform-dev": []
