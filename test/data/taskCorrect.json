@@ -1,0 +1,8 @@
+{
+  "name": "Test task",
+  "location": "Mars",
+  "source": "Firewall Proxy Alfa",
+  "urgency": "urgent",
+  "timeRequiredToPrepare": "1 day",
+  "timeRequiredToExecute": "1 day"
+}
