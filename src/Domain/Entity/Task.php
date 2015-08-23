@@ -4,10 +4,29 @@ namespace Mikron\Asesor\Domain\Entity;
 
 class Task
 {
+    /**
+     * @var string
+     */
     private $name;
+
+    /**
+     * @var string
+     * @todo encompass issues like: where is the operation conducted, what areas are only visited, where team stays
+     */
     private $location;
+
+    /**
+     * @var string
+     * @todo A name is rarely enough, unless assessing entity knows them; expand to object with own parameters
+     */
     private $source;
+
+    /**
+     * @var string
+     */
     private $urgency;
+
+    /* Time intervals are based on ISO 8601 duration specification, as required by DateInterval */
     private $timeRequiredToPrepare;
     private $timeRequiredToExecute;
 
@@ -17,8 +36,8 @@ class Task
         $this->location = $dataPayload->location;
         $this->source = $dataPayload->source;
         $this->urgency = $dataPayload->urgency;
-        $this->timeRequiredToPrepare = $dataPayload->timeRequiredToPrepare;
-        $this->timeRequiredToExecute = $dataPayload->timeRequiredToExecute;
+        $this->timeRequiredToPrepare = new \DateInterval($dataPayload->timeRequiredToPrepare);
+        $this->timeRequiredToExecute = new \DateInterval($dataPayload->timeRequiredToExecute);
     }
 
     /**
@@ -54,7 +73,7 @@ class Task
     }
 
     /**
-     * @return string
+     * @return \DateInterval
      */
     public function getTimeRequiredToPrepare()
     {
@@ -62,7 +81,7 @@ class Task
     }
 
     /**
-     * @return string
+     * @return \DateInterval
      */
     public function getTimeRequiredToExecute()
     {

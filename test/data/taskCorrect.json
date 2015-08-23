@@ -1,8 +1,8 @@
 {
   "name": "Test task",
-  "location": "Mars",
+  "location": "Martian countryside, precise location uncertain",
   "source": "Firewall Proxy Alfa",
   "urgency": "urgent",
-  "timeRequiredToPrepare": "1 day",
-  "timeRequiredToExecute": "1 day"
+  "timeRequiredToPrepare": "P1D",
+  "timeRequiredToExecute": "P1DT12H"
 }
