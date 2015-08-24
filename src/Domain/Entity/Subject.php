@@ -10,19 +10,44 @@ class Subject
     private $category;
     private $id;
 
-    /**
-     * Subject constructor.
-     * @param $short string Short label
-     * @param $long string Description
-     * @param $category Grading type
-     * @param $id ID used in resulting data
-     */
-    public function __construct($short, $long, $category, $id)
+    public function __construct($dataPayload)
     {
-        $this->short = $short;
-        $this->long = $long;
-        $this->category = $category;
-        $this->id = $id;
+        $this->short = isset($dataPayload->short) ? $dataPayload->short : "[short description has not been provided]";
+        $this->long = isset($dataPayload->long) ? $dataPayload->long : "[long description has not been provided]";
+        $this->category = isset($dataPayload->category) ? $dataPayload->category : "[unknown category]";
+        $this->id = isset($dataPayload->id) ? $dataPayload->id : null;
+    }
+
+    /**
+     * @return string
+     */
+    public function getShort()
+    {
+        return $this->short;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLong()
+    {
+        return $this->long;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
 }

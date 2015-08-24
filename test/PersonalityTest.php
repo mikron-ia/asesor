@@ -8,11 +8,6 @@ class PersonalityTest extends PHPUnit_Framework_TestCase
 {
     use JsonLoader;
 
-    protected function setUp()
-    {
-
-    }
-
     private function loadPersonality($name)
     {
         $data = $this->loadJSON($name);
@@ -24,7 +19,8 @@ class PersonalityTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function isDescriptionCorrect() {
+    public function isDescriptionCorrect()
+    {
         $persona = $this->loadPersonality('personalityCorrect');
         $this->assertEquals("Test personality, without much complication", $persona->getDescription());
     }
@@ -32,7 +28,8 @@ class PersonalityTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function isDescriptionDefault() {
+    public function isDescriptionDefault()
+    {
         $persona = $this->loadPersonality('empty');
         $this->assertEquals("[no description provided]", $persona->getDescription());
     }
