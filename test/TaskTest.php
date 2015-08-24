@@ -55,7 +55,7 @@ class TaskTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function istimeRequiredToPrepareCorrect()
+    public function isTimeRequiredToPrepareCorrect()
     {
         $task = $this->loadTask('taskCorrect');
         $this->assertEquals(new DateInterval("P1D"), $task->getTimeRequiredToPrepare());
@@ -64,7 +64,7 @@ class TaskTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function istimeRequiredToExecuteCorrect()
+    public function isTimeRequiredToExecuteCorrect()
     {
         $task = $this->loadTask('taskCorrect');
         $this->assertEquals(new DateInterval("P1DT12H"), $task->getTimeRequiredToExecute());
