@@ -16,7 +16,8 @@
   "require": {
     "phpunit/phpunit": "4.7",
     "php": "~5.5",
-    "ext-mbstring": "*"
+    "ext-mbstring": "*",
+    "codeclimate/php-test-reporter": "dev-master"
   },
   "scripts": {
     "test": "php vendor/phpunit/phpunit/phpunit --testdox --configuration test/phpunit.xml --coverage-clover build/logs/clover.xml"

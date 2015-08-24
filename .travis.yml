@@ -3,11 +3,15 @@ php:
   - 5.5
   - 5.6
   - hhvm
-  - 7.0
+# Version 7.0 was here before, but I think I will stick to stable versions - and ones I know sufficiently
 
 before_script:
-- composer self-update
-- composer install --prefer-source --no-interaction
+  - composer self-update
+  - composer install --prefer-source --no-interaction
 
 script:
-- composer test
+  - composer test
+  - CODECLIMATE_REPO_TOKEN=d5f25810d6227f8e73937c59a4dddacc80b7b2950266d127922a1a3eb1d640e7 ./vendor/bin/test-reporter
+
+matrix:
+  fast_finish: true
