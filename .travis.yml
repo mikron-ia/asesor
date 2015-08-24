@@ -2,8 +2,6 @@ language: php
 php:
   - 5.5
   - 5.6
-  - hhvm
-# Version 7.0 was here before, but I think I will stick to stable versions - and ones I know sufficiently
 
 before_script:
   - composer self-update
