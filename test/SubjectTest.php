@@ -1,13 +1,9 @@
 <?php
 
-require_once 'JsonLoader.php';
-
 use Mikron\Asesor\Domain\Entity\Subject;
 
-class SubjectTest extends PHPUnit_Framework_TestCase
+class SubjectTest extends BaseObjectTest
 {
-    use JsonLoader;
-
     private function loadSubject($name)
     {
         $data = $this->loadJSON($name);

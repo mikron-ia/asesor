@@ -3,12 +3,8 @@
 use Mikron\Asesor\Domain\Entity\Muse;
 use Mikron\Asesor\Domain\Entity\Personality;
 
-require_once 'JsonLoader.php';
-
-class MuseTest extends PHPUnit_Framework_TestCase
+class MuseTest extends BaseObjectTest
 {
-    use JsonLoader;
-
     protected function setUp()
     {
 

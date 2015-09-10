@@ -1,13 +1,9 @@
 <?php
 
-require_once 'JsonLoader.php';
-
 use Mikron\Asesor\Domain\Entity\Task;
 
-class TaskTest extends PHPUnit_Framework_TestCase
+class TaskTest extends BaseObjectTest
 {
-    use JsonLoader;
-
     private function loadTask($name)
     {
         $data = $this->loadJSON($name);

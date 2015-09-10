@@ -1,13 +1,9 @@
 <?php
 
-require_once 'JsonLoader.php';
-
 use Mikron\Asesor\Domain\Entity\Personality;
 
-class PersonalityTest extends PHPUnit_Framework_TestCase
+class PersonalityTest extends BaseObjectTest
 {
-    use JsonLoader;
-
     private function loadPersonality($name)
     {
         $data = $this->loadJSON($name);

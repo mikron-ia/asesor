@@ -1,6 +1,6 @@
 <?php
 
-trait JsonLoader
+abstract class BaseObjectTest extends PHPUnit_Framework_TestCase
 {
     protected function loadJSON($name)
     {
