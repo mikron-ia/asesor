@@ -7,18 +7,18 @@ table > thead > tr > th {
 }
 
 body {
-    font-size: 75%;
-    color: #222;
-    background: #fff;
+    background: #ffffff;
+    color: #222222;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    min-width: 640px;
-    max-width: 1280px;
+    font-size: 75%;
     margin: 0 auto;
+    max-width: 1280px;
+    min-width: 640px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
     color: #111111;
+    font-weight: normal;
 }
 
 h1 {
@@ -82,9 +82,9 @@ a {
 }
 
 blockquote {
-    margin: 1.5em;
-    color: #666;
+    color: #666666;
     font-style: italic;
+    margin: 1.5em;
 }
 
 strong, dfn {
@@ -104,8 +104,8 @@ abbr, acronym {
 }
 
 address {
-    margin: 0 0 1.5em;
     font-style: italic;
+    margin: 0 0 1.5em;
 }
 
 del {
