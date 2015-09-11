@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class BaseObjectTest
+ *
+ * Base class for all tests, it contains common methods for loading JSON files used in most of the tests
+ */
 abstract class BaseObjectTest extends PHPUnit_Framework_TestCase
 {
     protected function loadJSON($name)
