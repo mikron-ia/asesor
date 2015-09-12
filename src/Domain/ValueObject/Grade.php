@@ -12,7 +12,7 @@ class Grade
      */
     public function __construct($label)
     {
-        $this->text = $label;
+        $this->label = $label;
     }
 
     /**
