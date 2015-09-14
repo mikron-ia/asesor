@@ -22,5 +22,11 @@ class AssessmentTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($this->grade, $this->assessment->getGrade());
     }
 
-
+    /**
+     * @test
+     */
+    public function isElaborationCorrect()
+    {
+        $this->assertEquals("Test comment", $this->assessment->getElaboration());
+    }
 }

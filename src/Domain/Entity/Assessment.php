@@ -9,10 +9,10 @@ class Assessment
     private $grade;
     private $elaboration;
 
-    public function __construct(GradeAssessment $grade, $comment)
+    public function __construct(GradeAssessment $grade, $elaboration)
     {
         $this->grade = $grade;
-        $this->elaboration = $comment;
+        $this->elaboration = $elaboration;
     }
 
     /**
