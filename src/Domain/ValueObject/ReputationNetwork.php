@@ -16,11 +16,11 @@ class ReputationNetwork
     private $code;
     private $description;
 
-    public function __construct($name, $code, $description)
+    public function __construct($key, $record)
     {
-        $this->name = $name;
-        $this->code = $code;
-        $this->description = $description;
+        $this->name = $record['name'];
+        $this->code = isset($record['code'])?$record['code']:$key;
+        $this->description = !empty($record['description'])?$record['description']:"[no description]";
     }
 
     /**

@@ -162,3 +162,14 @@ $grade = [
         "Highly advisable",
     ],
 ];
+
+$reputations = [
+    "@" => [
+        "name" => "@-list",
+        "description" => "Autonomists",
+    ],
+    "c" => [
+        "name" => "CivicNet",
+        "description" => "Corporations",
+    ]
+];
