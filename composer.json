@@ -15,7 +15,7 @@
   },
   "require": {
     "phpunit/phpunit": "4.7",
-    "php": "~5.5",
+    "php": ">=5.5",
     "ext-mbstring": "*",
     "codeclimate/php-test-reporter": "dev-master"
   },
