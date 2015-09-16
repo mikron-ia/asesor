@@ -13,6 +13,5 @@ script:
   - CODECLIMATE_REPO_TOKEN=d5f25810d6227f8e73937c59a4dddacc80b7b2950266d127922a1a3eb1d640e7 ./vendor/bin/test-reporter
 
 matrix:
-  fast_finish: true
   allow_failures:
     - php: 7.0
