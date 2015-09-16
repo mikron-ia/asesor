@@ -14,7 +14,7 @@ class MuseTest extends BaseObjectTest
     {
         $config = $this->loadJSON($name);
 
-        $personality = new Personality([]);
+        $personality = new Personality([], []);
         $muse = new Muse($config, $personality);
 
         return $muse;

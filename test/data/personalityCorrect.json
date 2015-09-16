@@ -1,4 +1,10 @@
 {
   "description": "Test personality, without much complication",
-  "factors": []
+  "factors": [],
+  "reputationLists": {
+    "critical": ["@"],
+    "important": [],
+    "useful": ["c"],
+    "maintained": []
+  }
 }

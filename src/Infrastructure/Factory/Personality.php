@@ -23,7 +23,7 @@ class Personality
             throw new Exception\MissingComponentException("Missing personality file for the muse. Please provide the file before using the functionality.");
         }
 
-        return new Entity\Personality($data);
+        return new Entity\Personality($data, []);
     }
 
     private function getDataObjectFromJson($fileName)
