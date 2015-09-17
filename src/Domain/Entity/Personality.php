@@ -4,6 +4,12 @@ namespace Mikron\Asesor\Domain\Entity;
 
 use Mikron\Asesor\Domain\ValueObject\ReputationNetwork;
 
+/**
+ * Class Personality
+ * Personality of the Muse - the main system directing the assessments
+ *
+ * @package Mikron\Asesor\Domain\Entity
+ */
 class Personality
 {
     private $description;

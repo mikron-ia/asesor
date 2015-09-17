@@ -2,6 +2,10 @@
 
 namespace Mikron\Asesor\Domain\Entity;
 
+/**
+ * Class Task
+ * @package Mikron\Asesor\Domain\Entity
+ */
 class Task
 {
     /**

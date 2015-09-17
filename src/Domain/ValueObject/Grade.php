@@ -2,6 +2,10 @@
 
 namespace Mikron\Asesor\Domain\ValueObject;
 
+/**
+ * Class Grade
+ * @package Mikron\Asesor\Domain\ValueObject
+ */
 class Grade
 {
     private $label;

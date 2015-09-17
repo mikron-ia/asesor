@@ -2,6 +2,12 @@
 
 namespace Mikron\Asesor\Domain\Entity;
 
+/**
+ * Class Muse
+ * Simplified representation of the muse, functionally - container for personality
+ *
+ * @package Mikron\Asesor\Domain\Entity
+ */
 class Muse
 {
     private $name;

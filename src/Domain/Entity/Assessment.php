@@ -4,6 +4,12 @@ namespace Mikron\Asesor\Domain\Entity;
 
 use Mikron\Asesor\Domain\ValueObject\GradeAssessment;
 
+/**
+ * Class Assessment
+ * Final judgement & recommendation
+ *
+ * @package Mikron\Asesor\Domain\Entity
+ */
 class Assessment
 {
     private $grade;

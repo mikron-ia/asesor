@@ -2,7 +2,10 @@
 
 namespace Mikron\Asesor\Domain\Entity;
 
-
+/**
+ * Class Subject
+ * @package Mikron\Asesor\Domain\Entity
+ */
 class Subject
 {
     private $short;

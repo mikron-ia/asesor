@@ -2,6 +2,12 @@
 
 namespace Mikron\Asesor\Domain\Entity;
 
+/**
+ * Class Estimate
+ * Basic estimate regarding one subject
+ *
+ * @package Mikron\Asesor\Domain\Entity
+ */
 class Estimate
 {
     private $grade;

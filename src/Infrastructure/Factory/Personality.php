@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mlabedowicz
- * Date: 2015-08-10
- * Time: 15:12
- */
 
 namespace Mikron\Asesor\Infrastructure\Factory;
 
