@@ -46,5 +46,4 @@ class ReputationNetwork
     {
         return $this->description;
     }
-
 }

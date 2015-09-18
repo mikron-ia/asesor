@@ -3,6 +3,7 @@
 namespace Mikron\Asesor\Domain\Entity;
 
 use Mikron\Asesor\Domain\ValueObject\ReputationNetwork;
+use Mikron\Asesor\Domain\ValueObject\ReputationNetworkList;
 
 /**
  * Class Personality
@@ -41,20 +42,20 @@ class Personality
         $this->factors = isset($data->factors) ? $data->factors : [];
 
         /* Handle reputations */
-        $this->reputationsCritical = [];
-        $this->reputationsImportant = [];
-        $this->reputationsUseful = [];
-        $this->reputationsMaintained = [];
+        $reputations = [
+            'critical' => [],
+            'important' => [],
+            'useful' => [],
+            'maintained' => []
+        ];
 
         if (isset($data->reputationLists)) {
             foreach ($data->reputationLists as $key => $reputationList) {
-                foreach ($reputationList as $reputationCode)
-                {
-                    if (isset($reputationListFromConfig[$reputationCode])) {
-                        $varName = "reputations" . ucfirst($key);
-                        array_push($this->$varName, $reputationListFromConfig[$reputationCode]);
-                    }
+                $varName = "reputations" . ucfirst($key);
+                foreach ($reputationList as $reputationCode) {
+                    array_push($reputations[$key], $reputationCode);
                 }
+                $this->$varName = new ReputationNetworkList($reputations[$key], $reputationListFromConfig);
             }
         }
     }
@@ -98,6 +99,5 @@ class Personality
     {
         return $this->reputationsMaintained;
     }
-
 }
 
