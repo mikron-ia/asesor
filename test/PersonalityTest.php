@@ -7,7 +7,19 @@ class PersonalityTest extends BaseObjectTest
     private function loadPersonality($name)
     {
         $data = $this->loadJSON($name);
-        $personality = new Personality($data, []);
+
+        $reputations = [
+            "@" => [
+                "name" => "@-list",
+                "description" => "Autonomists",
+            ],
+            "c" => [
+                "name" => "CivicNet",
+                "description" => "Corporations",
+            ]
+        ];
+
+        $personality = new Personality($data, $reputations);
 
         return $personality;
     }

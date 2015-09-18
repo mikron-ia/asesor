@@ -52,7 +52,7 @@ class Personality
                 {
                     if (isset($reputationListFromConfig[$reputationCode])) {
                         $varName = "reputations" . ucfirst($key);
-                        array_push($this->$varName, $reputationListFromConfig[$reputationList]);
+                        array_push($this->$varName, $reputationListFromConfig[$reputationCode]);
                     }
                 }
             }
