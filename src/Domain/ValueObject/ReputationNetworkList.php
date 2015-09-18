@@ -25,7 +25,7 @@ class ReputationNetworkList
 
         foreach ($codeList as $reputationCode) {
             if (isset($reputationListFromConfig[$reputationCode])) {
-                $this->reputationNetworkList[] = $reputationListFromConfig[$reputationCode];
+                $this->reputationNetworkList[$reputationCode] = $reputationListFromConfig[$reputationCode];
             }
         }
     }

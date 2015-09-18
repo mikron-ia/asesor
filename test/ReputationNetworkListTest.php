@@ -6,10 +6,8 @@ use Mikron\Asesor\Domain\ValueObject\ReputationNetworkList;
 use Mikron\Asesor\Infrastructure\Factory\ReputationNetwork as ReputationNetworkFactory;
 
 class ReputationNetworkListTest extends PHPUnit_Framework_TestCase
-{
-    private $configList;
-
-    protected function setUp()
+{    
+    private function loadCompleteConfigList()
     {
         $reputations = [
             "@" => [
@@ -23,8 +21,7 @@ class ReputationNetworkListTest extends PHPUnit_Framework_TestCase
         ];
 
         $factory = new ReputationNetworkFactory();
-
-        $this->configList = $factory->createFromCompleteArray($reputations);
+        return $factory->createFromCompleteArray($reputations);
     }
 
     /**
@@ -50,30 +47,33 @@ class ReputationNetworkListTest extends PHPUnit_Framework_TestCase
      */
     public function isListCorrect($codeList)
     {
+        $configList = $this->loadCompleteConfigList();
         $objectList = [];
+
         foreach ($codeList as $code) {
-            if (isset($this->configList[$code])) {
-                $objectList[] = $this->configList[$code];
+            if (isset($configList[$code])) {
+                $objectList[$code] = $configList[$code];
             }
         }
 
-        $reputationNetworkList = new ReputationNetworkList($codeList, $this->configList);
+        $reputationNetworkList = new ReputationNetworkList($codeList, $configList);
 
         $this->assertEquals($reputationNetworkList->getReputationNetworkList(), $objectList);
     }
 
     public function listComparatorDataProvider()
     {
+        $configList = $this->loadCompleteConfigList();
         return [
             [
-                new ReputationNetworkList(["@", "c"], $this->configList),
-                new ReputationNetworkList(["@"], $this->configList),
-                new ReputationNetworkList(["@"], $this->configList)
+                new ReputationNetworkList(["@", "c"], $configList),
+                new ReputationNetworkList(["@"], $configList),
+                new ReputationNetworkList(["@"], $configList)
             ],
             [
-                new ReputationNetworkList(["@", "c"], $this->configList),
-                new ReputationNetworkList(["c"], $this->configList),
-                new ReputationNetworkList(["c"], $this->configList)
+                new ReputationNetworkList(["@", "c"], $configList),
+                new ReputationNetworkList(["c"], $configList),
+                new ReputationNetworkList(["c"], $configList)
             ],
         ];
     }
