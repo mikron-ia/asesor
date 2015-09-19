@@ -6,21 +6,50 @@ use Mikron\Asesor\Domain\ValueObject\ReputationNetworkList;
 use Mikron\Asesor\Infrastructure\Factory\ReputationNetwork as ReputationNetworkFactory;
 
 class ReputationNetworkListTest extends PHPUnit_Framework_TestCase
-{    
+{
     private function loadCompleteConfigList()
     {
         $reputations = [
             "@" => [
                 "name" => "@-list",
-                "description" => "Autonomists",
+                "description" => "Autonomists: anarchists, Barsoomians, Extropians, Titanian, scum",
             ],
             "c" => [
                 "name" => "CivicNet",
-                "description" => "Corporations",
+                "description" => "Hypercorps, Jovians, Lunars, Martians, Venusians",
+            ],
+            "e" => [
+                "name" => "EcoWave",
+                "description" => "nano-ecologists, preservationists, reclaimers",
+            ],
+            "f" => [
+                "name" => "Fame",
+                "description" => "Media: socialities, celebrities, glitterati",
+            ],
+            "g" => [
+                "name" => "Guanxi",
+                "description" => "Criminals",
+            ],
+            "i" => [
+                "name" => "The Eye",
+                "description" => "Firewall",
+            ],
+            "r" => [
+                "name" => "Research Network Associates",
+                "description" => "Scientists: Argonauts, researchers, hypertechnologists",
+            ],
+            "x" => [
+                "name" => "ExploreNet",
+                "description" => "Gatecrashers",
+            ],
+            "m" => [
+                "name" => "MilNet",
+                "description" => "Mercenaries",
             ]
         ];
 
         $factory = new ReputationNetworkFactory();
+
         return $factory->createFromCompleteArray($reputations);
     }
 
@@ -64,6 +93,7 @@ class ReputationNetworkListTest extends PHPUnit_Framework_TestCase
     public function listComparatorDataProvider()
     {
         $configList = $this->loadCompleteConfigList();
+
         return [
             [
                 new ReputationNetworkList(["@", "c"], $configList),
@@ -72,8 +102,23 @@ class ReputationNetworkListTest extends PHPUnit_Framework_TestCase
             ],
             [
                 new ReputationNetworkList(["@", "c"], $configList),
-                new ReputationNetworkList(["c"], $configList),
+                new ReputationNetworkList(["c", "m"], $configList),
                 new ReputationNetworkList(["c"], $configList)
+            ],
+            [
+                new ReputationNetworkList(["@", "c"], $configList),
+                new ReputationNetworkList(["m"], $configList),
+                new ReputationNetworkList([], $configList)
+            ],
+            [
+                new ReputationNetworkList(["@", "c", "m", "g"], $configList),
+                new ReputationNetworkList(["c", "m", "@", "r"], $configList),
+                new ReputationNetworkList(["c", "m", "@"], $configList)
+            ],
+            [
+                new ReputationNetworkList(["@", "c", "g", "m"], $configList),
+                new ReputationNetworkList(["c", "@", "m", "r"], $configList),
+                new ReputationNetworkList(["m", "@", "c"], $configList)
             ],
         ];
     }
