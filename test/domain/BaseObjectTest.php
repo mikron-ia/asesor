@@ -14,7 +14,7 @@ abstract class BaseObjectTest extends PHPUnit_Framework_TestCase
 
     protected function loadJsonIntoObject($name)
     {
-        if ($json = file_get_contents(dirname(__FILE__) . '/data/' . $name . '.json')) {
+        if ($json = file_get_contents(dirname(__FILE__) . '/../data/' . $name . '.json')) {
             $data = json_decode($json,false);
         } else {
             $data = null;
@@ -25,7 +25,7 @@ abstract class BaseObjectTest extends PHPUnit_Framework_TestCase
 
     protected function loadJsonIntoArray($name)
     {
-        if ($json = file_get_contents(dirname(__FILE__) . '/data/' . $name . '.json')) {
+        if ($json = file_get_contents(dirname(__FILE__) . '/../data/' . $name . '.json')) {
             $data = json_decode($json,true);
         } else {
             $data = null;
