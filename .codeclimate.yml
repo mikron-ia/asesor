@@ -21,7 +21,7 @@ engines:
       enabled: true
       config:
         file_extensions: "php"
-        rulesets: "unusedcode,naming,design,controversial"
+        rulesets: "codesize,controversial,design,naming,unusedcode"
   phpcodesniffer:
     enabled: true
 
